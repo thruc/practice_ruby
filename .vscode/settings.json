@@ -1,0 +1,8 @@
+{
+  "rufo.exe": "/Users/holy/.rbenv/shims/rufo",
+  "rufo.useBundler": false,
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.formatOnSave": true,
+}
