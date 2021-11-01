@@ -5,3 +5,34 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Question.create(
+  id: 0,
+  name: 'test1',
+  title: 'タイトル1',
+  content: 'コンテンツ1',
+)
+Question.create(
+  id: 2,
+  name: 'test2',
+  title: 'タイトル2',
+  content: 'コンテンツ2',
+)
+Question.create(
+  id: 3,
+  name: 'test3',
+  title: 'タイトル3',
+  content: 'コンテンツ3',
+)
+Question.create(
+  id: 4,
+  name: 'test4',
+  title: 'タイトル4',
+  content: 'コンテンツ4',
+)
+Question.create(
+  id: 5,
+  name: 'test5',
+  title: 'タイトル5',
+  content: 'コンテンツ5',
+)
