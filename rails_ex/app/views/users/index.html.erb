@@ -2,5 +2,11 @@
 <p>Find me in app/views/users/index.html.erb</p>
 
 <p>
-<%= @num %>
+    <%= @num %>
 </p>
+
+<ul>
+    <% @users.each do |user| %>
+    <li><%= user.id %>,<%= user.age %>,<%= user.name %></li>
+    <% end %>
+</ul>
