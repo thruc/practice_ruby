@@ -1,9 +1,17 @@
 {
   "rufo.exe": "/Users/holy/.rbenv/shims/rufo",
-  "rufo.useBundler": false,
+  "rufo.useBundler": true,
   "files.trimFinalNewlines": true,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "ruby.intellisense": "rubyLocate",
+  "beautify.language": {
+    "html": [
+      "htm",
+      "html",
+      "erb"
+    ]
+  },
+  "prettier.prettierPath": "./node_modules/prettier"
 }
