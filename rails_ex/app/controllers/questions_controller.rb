@@ -1,10 +1,11 @@
 class QuestionsController < ApplicationController
+  before_action :set_question, only: %i[show edit update destroy]
   def index
     @questions = Question.all
   end
 
   def show
-    @question = Question.find(params[:id])
+    @answer = Answer.new
   end
 
   def create
@@ -20,13 +21,9 @@ class QuestionsController < ApplicationController
   def new
     @question = Question.new
   end
-
-  def edit
-    @question = Question.find(params[:id])
-  end
+  def edit; end
 
   def update
-    @question = Question.find(params[:id])
     if @question.update(question_params)
       redirect_to root_path, notice: 'Success!'
     else
@@ -36,7 +33,6 @@ class QuestionsController < ApplicationController
   end
 
   def destroy
-    @question = Question.find(params[:id])
     @question.destroy
     redirect_to root_path, notice: 'Success!'
   end
