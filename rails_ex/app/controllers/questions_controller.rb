@@ -19,7 +19,19 @@ class QuestionsController < ApplicationController
     @question = Question.new
   end
 
-  def edit; end
+  def edit
+    @question = Question.find(params[:id])
+  end
+
+  def update
+    @question = Question.find(params[:id])
+    if @question.update(question_params)
+      redirect_to root_path, notice: 'Success!'
+    else
+      flash[:alert] = 'Save error!'
+      render :edit
+    end
+  end
 
   private
 
