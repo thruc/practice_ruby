@@ -3,7 +3,9 @@ class QuestionsController < ApplicationController
     @questions = Question.all
   end
 
-  def show; end
+  def show
+    @question = Question.find(params[:id])
+  end
 
   def create
     @question = Question.new(question_params)
@@ -31,6 +33,12 @@ class QuestionsController < ApplicationController
       flash[:alert] = 'Save error!'
       render :edit
     end
+  end
+
+  def destroy
+    @question = Question.find(params[:id])
+    @question.destroy
+    redirect_to root_path, notice: 'Success!'
   end
 
   private
