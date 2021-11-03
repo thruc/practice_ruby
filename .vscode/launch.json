@@ -11,6 +11,17 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "cwd": "${fileDirname}",
+        },
+        {
+            "name": "rails_ex server",
+            "type": "Ruby",
+            "request": "launch",
+            "program": "${workspaceRoot}/rails_ex/bin/rails",
+            "cwd": "${workspaceRoot}/rails_ex",
+            "args": [
+              "server"
+            ],
+            "useBundler": true,
         }
     ]
 }
